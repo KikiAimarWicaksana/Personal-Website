@@ -1,0 +1,437 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #f5f5dc; /* Cream color */
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #f5f5dc;
+  padding: 10px;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  color: #000; /* Black color */
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000; /* Black color */
+  position: relative;
+  display: inline-block;
+}
+
+.cta-button {
+  background-color: #ffd700; /* Yellow color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 25px;
+}
+
+.navbar .cta-button:hover {
+  background-color: #FFA500; /* Warna latar belakang saat tombol dihover */
+}
+
+.cta-btn {
+  text-decoration: none;
+  color: #000; /* Black color */
+  font-weight: bold;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+/* Menambahkan efek transisi pada seluruh .nav-links */
+.nav-links a:hover {
+  color: #ffd700; /* Ganti warna sesuai keinginan */
+}
+
+/* Tambahkan gaya untuk tombol toggle menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #000;
+  margin: 5px 0;
+  display: block;
+}
+
+/* Gaya untuk versi mobile */
+@media only screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Sesuaikan dengan tinggi header */
+    left: 0;
+    background-color: #f5f5dc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Z-index untuk navbar tetap 1 */
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar.show .nav-links {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative; /* Tambahkan properti position:relative */
+    z-index: 2; /* Z-index untuk navbar ketika tampil 2 */
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    display: block;
+  }
+
+  .cta-button {
+    margin-top: 10px;
+  }
+
+  /* Tambahkan gaya agar elemen h1 terlihat di layar */
+  .about-text h1 {
+    white-space: nowrap; /* Hindari pemotongan teks ke baris baru */
+    overflow: hidden; /* Sembunyikan teks yang melebihi lebar */
+    font-size: 22px; /* Sesuaikan ukuran font sesuai kebutuhan */
+    padding: 0 10px; /* Tambahkan padding di sekitar teks */
+  }
+  
+  .profile-image {
+    margin-top: 10px; /* Sesuaikan margin atas agar tidak terlalu dekat dengan teks */
+  }
+
+  .skills-section {
+    padding: 20px; /* Sesuaikan padding untuk tampilan seluler */
+  }
+
+  .skills-content {
+    flex-direction: column; /* Mengubah arah fleks ke vertikal untuk tampilan seluler */
+  }
+
+  .skills-text {
+    margin-top: 20px; /* Sesuaikan margin atas untuk tampilan seluler */
+  }
+
+  .skills-column {
+    text-align: center; /* Pusatkan teks pada tampilan seluler */
+  }
+
+  .skills-column img {
+    margin-bottom: 10px; /* Sesuaikan jarak antara logo keterampilan pada tampilan seluler */
+  }
+
+  .certificate-button {
+    margin-top: 20px; /* Sesuaikan margin atas tombol sertifikasi untuk tampilan seluler */
+  }
+  body {
+    overflow-x: hidden; /* Mencegah overflow horizontal pada tampilan seluler */
+    background-color: #f5f5dc; /* Atur warna latar belakang sesuai kebutuhan Anda */
+  }
+
+  .skills-section .skills-content {
+    flex-direction: column; /* Mengubah orientasi konten skills menjadi vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+    text-align: center; /* Pusatkan teks secara horizontal */
+  }
+
+  .skills-text .skills-column {
+    margin-top: 20px; /* Tambahkan margin atas untuk memberikan jarak di antara kolom */
+  }
+
+}
+
+/*Section about */
+
+.about-section {
+    background-color: #f5f5dc; /* Warna latar belakang yang sesuai */
+    padding: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    width: 60%; /* Sesuaikan lebar teks sesuai kebutuhan */
+}
+
+.profile-image {
+    width: 35%; /* Sesuaikan lebar gambar sesuai kebutuhan */
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 8px; /* Agar gambar terlihat lebih estetis */
+}
+
+.about-text h1 {
+  overflow: hidden; /* Membuat overflow hidden agar teks tidak terlihat sebelum animasi dimulai */
+  white-space: nowrap; /* Mencegah teks pindah ke baris baru */
+  animation: typing 2s steps(28) infinite; /* Animasi typing selama 2 detik */
+
+}
+
+/* Keyframes untuk animasi typing */
+@keyframes typing {
+  from {
+      width: 0; /* Mulai dengan lebar 0 */
+  }
+  to {
+      width: 100%; /* Akhir dengan lebar 100% (muncul sepenuhnya) */
+  }
+}
+
+.about-text .cta-btn {
+  background-color: #FFD700; /* Warna latar belakang yang sesuai */
+  color: #000; /* Warna teks yang sesuai */
+  padding: 10px 20px; /* Ukuran padding tombol */
+  text-decoration: none; /* Menghapus dekorasi tautan jika diperlukan */
+  border-radius: 5px; /* Membuat sudut tombol melengkung */
+  display: inline-block; /* Agar tombol hanya membutuhkan ruang yang diperlukan */
+  transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna latar belakang */
+}
+
+.about-text .cta-btn:hover {
+  background-color: #FFA500; /* Warna latar belakang saat tombol dihover */
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Sesuaikan margin atas */
+}
+
+.social-icons a {
+  margin-right: 20px; /* Sesuaikan margin antar ikon */
+}
+
+.social-icons img {
+  width: 40px; /* Sesuaikan lebar ikon */
+  height: auto; /* Biarkan tinggi mengikuti lebar */
+}
+
+/* Section Skills */
+.skills-section {
+  background-color: #f5f5dc; /* Sesuaikan dengan warna latar belakang di About */
+  padding: 40px;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills-image img {
+  width: 75%; /* Pastikan gambar penuh lebar dalam kotak gambar */
+  border-radius: 10px; /* Agar gambar terlihat lebih estetis */
+}
+
+.skills-text {
+  width: 50%; /* Sesuaikan lebar teks sesuai kebutuhan */
+}
+
+.skills-text h2 {
+  font-size: 24px; /* Sesuaikan ukuran font sesuai kebutuhan */
+}
+
+.skills-text p {
+  font-size: 16px; /* Sesuaikan ukuran font sesuai kebutuhan */
+}
+
+.skills-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-column p {
+  display: flex;
+  align-items: center;
+}
+
+.skill-logo {
+  margin-right: 5px; /* Sesuaikan jarak antara logo jika diperlukan */
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.certificate-button {
+  background-color: #ffd700; /* Warna latar belakang putih */
+  color: #000; /* Warna teks hitam */
+  border: 2px solid #000; /* Border berwarna hitam dengan ketebalan 2px */
+  padding: 10px 20px; /* Ukuran padding tombol */
+  border-radius: 5px; /* Sudut tombol melengkung */
+  margin-top: 10px; /* Jarak antara logo dan tombol */
+  cursor: pointer;
+}
+
+.certificate-button:hover {
+  background-color: #000; /* Warna latar belakang hitam saat tombol dihover */
+  color: #fff; /* Warna teks putih saat tombol dihover */
+}
+
+
+/* Section Projects */
+.projects-section {
+  background-color: #f5f5dc; /* Sesuaikan dengan warna latar belakang yang Anda inginkan */
+  padding: 40px;
+}
+
+.projects-content {
+  display: flex;
+  justify-content: center; /* Menengahkan proyek-proyek di tengah */
+  gap: 20px; /* Jarak antara proyek-proyek */
+}
+
+.project-details {
+  max-width: 800px; /* Maksimum lebar konten proyek */
+}
+
+.project-item {
+  border: 1px solid #ddd; /* Garis pembatas antar proyek */
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-item img {
+  max-width: 100%; /* Agar gambar tidak melebihi lebar kontainer */
+  height: auto; /* Biarkan tinggi gambar menyesuaikan agar tidak terdistorsi */
+}
+
+
+.project-details {
+  text-align: center;
+}
+
+.project-item {
+  display: inline-block;
+  text-align: left;
+  margin: 0 15px; /* Sesuaikan dengan jarak antar project item */
+}
+
+/* Gaya untuk tombol di section project */
+.project-button {
+  background-color: #ffd700; /* Warna latar belakang yang sesuai */
+  color: #000; /* Warna teks yang sesuai */
+  padding: 10px 20px; /* Ukuran padding tombol */
+  text-decoration: none; /* Menghapus dekorasi tautan jika diperlukan */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Membuat sudut tombol melengkung */
+  display: inline-block; /* Agar tombol hanya membutuhkan ruang yang diperlukan */
+  transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna latar belakang */
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background-color: #FFA500; /* Warna latar belakang saat tombol dihover */
+}
+
+/* Gaya untuk tombol "View All Projects" */
+.view-all-projects {
+  text-align: center; /* Pusatkan tombol */
+  margin-top: 20px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+.view-all-projects a {
+  background-color: #ffd700; /* Warna latar belakang yang sesuai */
+  color: #000; /* Warna teks yang sesuai */
+  padding: 10px 20px; /* Ukuran padding tombol */
+  text-decoration: none; /* Menghapus dekorasi tautan jika diperlukan */
+  border-radius: 5px; /* Membuat sudut tombol melengkung */
+  display: inline-block; /* Agar tombol hanya membutuhkan ruang yang diperlukan */
+  transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna latar belakang */
+}
+
+.view-all-projects a:hover {
+  background-color: #FFA500; /* Warna latar belakang saat tombol dihover */
+}
+
+
+/* Tambahkan gaya CSS untuk bagian kontak di footer */
+footer {
+  background-color: #607274;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-section {
+  margin-bottom: 20px;
+}
+
+.contact-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.social-icons-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-footer a {
+  margin: 0 10px;
+}
+
+
+
+
+

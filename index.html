@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KikiAimarWicaksana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">KimTech</a>
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skill</a>
+          <a href="#projects">Projects</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="cta-button">
+          <a href="#contact" class="cta-btn">Let's Talk</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Content Section -->
+      <section id="about" class="about-section">
+        <div class="about-content">
+          <div class="about-text">
+            <h1>Hello! I'm Kiki Aimar Wicaksana,</h1>
+            <p>
+              Feel free to call me "Kim". A passionate third-semester computer
+              science student, driven by a high curiosity and interested in the
+              world of data. Let's embark on this digital journey together and
+              create something amazing!
+            </p>
+            <a href="#contact" class="cta-btn">Let's Talk</a>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/kiki-aimar-wicaksana-4b27272a5/"
+                target="_blank"
+                ><img src="asset/icons8-linkedin-30.png" alt="LinkedIn"
+              /></a>
+              <a href="https://github.com/KikiAimarWicaksana" target="_blank"
+                ><img src="asset/icons8-github-30.png" alt="GitHub"
+              /></a>
+            </div>
+
+            <!-- Add more details about yourself as needed -->
+          </div>
+          <div class="profile-image">
+            <!-- Add your profile image here -->
+            <img
+              src="asset/ProfilePicture-removebg-preview.png"
+              alt="Kiki Aimar Wicaksana"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Skills -->
+      <section id="skills" class="skills-section">
+        <div class="skills-content">
+          <div class="skills-image">
+            <!-- Ganti "path/to/skill-image.jpg" dengan jalur gambar skill Anda -->
+            <img src="asset/DataPict.jpeg" alt="Skill Image" />
+          </div>
+          <div class="skills-text">
+            <h2>Skill</h2>
+            <p>
+              I am deeply interested in data and aspire to become a skilled data
+              analyst. My soft skills include critical thinking, effective
+              communication, and teamwork. On the technical side, I am learning
+              programming and data analysis using Python and R. I am committed
+              to constant skill improvement, continuous learning, and taking on
+              new data projects with enthusiasm. With a blend of hard and soft
+              skills, I aim to excel in the data field.
+            </p>
+            <!-- Tambahkan lebih banyak deskripsi atau keterampilan jika diperlukan -->
+            <div class="skills-column">
+              <p>
+                <!-- Logo untuk hard skills -->
+                <img
+                  src="asset/icons8-java-48.png"
+                  alt="Java"
+                  class="skill-logo"
+                  title="Java"
+                />
+                Java
+                <br />
+                <img
+                  src="asset/icons8-python-48.png"
+                  alt="Python"
+                  class="skill-logo"
+                  title="Python"
+                />
+                Python
+                <br />
+                <img
+                  src="asset/icons8-my-sql-48.png"
+                  alt="MySQL"
+                  class="skill-logo"
+                  title="MySQL"
+                />
+                MySQL
+                <br />
+                <img
+                  src="asset/icons8-postgresql-48.png"
+                  alt="PostgreSQL"
+                  class="skill-logo"
+                  title="PostgreSQL"
+                />
+                PostgreSQL
+                <br />
+                <!-- Tambahkan lebih banyak logo hard skills di sini -->
+              </p>
+            </div>
+            <button class="certificate-button">Expertise Certificate</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Projects -->
+      <section id="projects" class="projects-section">
+        <div class="projects-content">
+          <div class="project-details">
+            <h2>Projects</h2>
+            <div class="project-item" onclick="openProject('project1')">
+              <h3>Project Title 1</h3>
+              <p>Project description goes here. Provide details about what the project is, your role, technologies used, etc.</p>
+              <!-- Ganti "path/to/project1-image.jpg" dengan jalur gambar proyek Anda -->
+              <button class="cta-btn project-button" onclick="window.location.href='https://your-project1-url.com';">View Project</button>
+            </div>
+            <div class="project-item" onclick="openProject('project2')">
+              <h3>Project Title 2</h3>
+              <p>Project description goes here. Provide details about what the project is, your role, technologies used, etc.</p>
+              <!-- Ganti "path/to/project2-image.jpg" dengan jalur gambar proyek Anda -->
+              <button class="cta-btn project-button" onclick="window.location.href='https://your-project2-url.com';">View Project</button>
+            </div>
+            <div class="project-item" onclick="openProject('project3')">
+              <h3>Project Title 3</h3>
+              <p>Project description goes here. Provide details about what the project is, your role, technologies used, etc.</p>
+              <!-- Ganti "path/to/project3-image.jpg" dengan jalur gambar proyek Anda -->
+              <button class="cta-btn project-button" onclick="window.location.href='https://your-project3-url.com';">View Project</button>
+            </div>
+            <div class="view-all-projects">
+              <a href="#" class="cta-button">View All Projects</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+<footer>
+  <div class="contact-section">
+    <h2>Contact Me</h2>
+    <!-- Logo Media Sosial -->
+    <div class="social-icons-footer">
+      <a href="https://www.linkedin.com/in/kiki-aimar-wicaksana-4b27272a5/" target="_blank">
+        <img src="asset/icons8-linkedin-30.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/KikiAimarWicaksana" target="_blank">
+        <img src="asset/icons8-github-30.png" alt="GitHub">
+      </a>
+      <a href="https://www.instagram.com/kikiaimar28/" target="_blank">
+        <img src="asset/icons8-instagram-30.png" alt="Instagram">
+      </a>
+      <!-- Tambahkan logo media sosial lainnya jika diperlukan -->
+    </div>
+  </div>
+  <p>&copy; 2024 KimTech</p>
+</footer>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
